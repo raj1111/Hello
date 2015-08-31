@@ -1,0 +1,7 @@
+<apex:page controller="ApartmentRoom">
+<apex:form >
+
+
+</apex:form>
+ 
+</apex:page>

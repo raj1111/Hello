@@ -1,0 +1,9 @@
+<apex:page >
+  <h2>
+  <marquee onmouseover="this.scrollAmount=2onmouseout=this.scrollAmount=6" bgcolor="yellow" style="background-color: yellow;">
+  <font color="black">
+  Hello World..!
+  </font>
+  </marquee>
+  </h2>
+</apex:page>

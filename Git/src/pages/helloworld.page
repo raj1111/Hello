@@ -1,0 +1,47 @@
+<apex:page standardController="Account" extensions="ee">
+
+<apex:form >
+    {! $User.FirstName & ' ' & $User.LastName}
+    <p> today's date: {!Today()} </p>
+    <p> nextweek's date: {!Today()+7}  need to submit the record </p>
+    {!IF(day(Today())>12, 'yes it is' , 'no it is not')}
+
+<apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:commandButton value="save" action="{!save}"/>
+        <apex:commandButton value="delete" action="{!delete}"/>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:inputField value="{!Account.Name}"/>
+           </apex:pageBlockSection>
+    <apex:pageBlockSection >
+                <apex:inputField value="{!Account.Phone}"/>
+       </apex:pageBlockSection>
+ <apex:pageBlockSection >
+       <apex:pageBlockSectionItem >
+          fax <apex:inputField value="{!Account.Fax}"/>
+</apex:pageBlockSectionItem>
+
+    <apex:pageBlockSectionItem >
+          site <apex:inputField value="{!Account.Site}"/>
+     </apex:pageBlockSectionItem>    
+ </apex:pageBlockSection>
+
+<apex:pageBlock title="{!account.name}">
+</apex:pageBlock>
+                    <apex:page standardController="account" tabStyle="account">
+  <apex:pageBlock >
+        <apex:pageBlockSection title="Opportunity Information">
+            <apex:outputField value="{!account.name}"/>
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>   
+     
+</apex:pageBlock>
+
+</apex:form>
+
+</apex:page>
